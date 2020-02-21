@@ -15,11 +15,12 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
-    @cocktail.save
 
     if @cocktail.save
+      p "je suis dans le save"
       redirect_to cocktail_path(@cocktail)
     else
+      p "je suis dans le else"
       @cocktail.errors.full_messages
       render :new
     end

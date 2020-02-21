@@ -1,13 +1,13 @@
-<%= simple_form_for(cocktail) do |c| %>
+<%= simple_form_for(cocktail) do |f| %>
   <%#= f.error_notification %>
   <%#= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= c.input :name %>
+    <%= f.input :name %>
     <%= f.input :photo, as: :file %>
     <!-- dose.description et ingredient.name-->
   </div>
   <div class="form-actions">
-    <%= c.button :submit %>
+    <%= f.button :submit %>
   </div>
 <% end %>
