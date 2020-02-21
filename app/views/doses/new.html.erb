@@ -1,4 +1,10 @@
-<h1>Add a new Ingredient to <%= @cocktail.name %></h1>
+<div class="banner">
+  <div class="container">
+    <h1>Cocktails Bible</h1>
+  </div>
+</div>
+<div class="container bg-lig mt-4">
+<h3>Add a new Ingredient to <%= @cocktail.name %></h3>
 
 <%= simple_form_for([@cocktail, @dose]) do |f| %>
   <%#= f.error_notification %>
@@ -8,9 +14,12 @@
     <%= f.input :description %>
   </div>
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-ghost" %>
   </div>
 
 <% end %>
 
-<%= link_to 'Back', cocktails_path %>
+<%= link_to cocktails_path do %>
+  <i class="fas fa-backward">Back</i>
+  <% end %>
+</div>

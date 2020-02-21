@@ -1,5 +1,14 @@
-<h1>Add a new Cocktail</h1>
+<div class="banner">
+  <div class="container">
+    <h1>Cocktails Bible</h1>
+  </div>
+</div>
+<div class="container bg-lig mt-4">
+  <h3>Add a new Cocktail</h3>
 
 <%= render 'form', cocktail: @cocktail %>
 
-<%= link_to 'Back', cocktails_path %>
+<%= link_to cocktails_path do %>
+  <i class="fas fa-backward">Back</i>
+  <% end %>
+</div>
