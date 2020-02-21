@@ -3,7 +3,9 @@
 <p>Ingredients</p>
 <ul>
   <% @cocktail.doses.each do |dose| %>
-  <li><%= dose.ingredient.name %>
+  <li>
+    <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+    <%= dose.ingredient.name %>
     <%= dose.description %>
     <%= link_to 'Delete the dose', dose, method: :delete, data: { confirm: 'Are you sure?' } %>
 
